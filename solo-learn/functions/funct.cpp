@@ -16,7 +16,9 @@ void print(int num = 42);
 int fact(int n);
 //  arr as param
 //void printArr(int arr[], int size);
-void printArr( int *arr, int size); // same as ^ 
+void printArr( int* arr, int size); // same as ^
+// pass by reference
+void doubleIntByRef(int* i);
 
 int main()
 {
@@ -36,6 +38,14 @@ int main()
   *(arr + 5) = 67;
   printArr(arr, size);
   delete [] arr; // no mem leak
+
+  //  funct pass by reference (usually pass by value, which copies arg)
+  int anInt = 21;
+  cout << "anInt: " << anInt << endl;
+  doubleIntByRef(&anInt);
+  cout << "anInt: " << anInt << endl;
+
+  return 0;
 }
 
 //  can define later
@@ -82,4 +92,9 @@ void printArr(int arr[], int size)
     cout << arr[i] << " ";
   }
   cout << "]" << endl;
+}
+
+void doubleIntByRef(int* i)
+{
+  *i = *i * 2;
 }

@@ -19,6 +19,6 @@ int main()
     string *addr_of_3rd = arr + 2;
     cout << "addr of 3rd element: " << addr_of_3rd << endl;
     cout << "val of 3rd element: " << *addr_of_3rd << endl;
-
     delete [] arr; // no mem leaks
+    return 0;
 }
