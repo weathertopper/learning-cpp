@@ -39,7 +39,6 @@ void BookCharacter::printClassName() const
   cout << "BookCharacter" << endl;
 }
 
-
 BookCharacter::~BookCharacter()
 {
   cout << "DESTRUCTOR" << endl;
