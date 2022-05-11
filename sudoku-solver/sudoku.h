@@ -19,7 +19,7 @@ void copyPuzzle(int *original_puzzle, int *copy_puzzle);
 
 int findFirstZero(int *puzzle);
 
-bool solvePuzzle(int *puzzle);
+bool solvePuzzle(int *puzzle, int *solved_puzzle);
 
 void prettyPrint(int *puzzle);
 

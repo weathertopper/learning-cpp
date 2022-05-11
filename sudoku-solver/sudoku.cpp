@@ -100,8 +100,9 @@ int findFirstZero(int *puzzle) {
   return -1;
 }
 
-bool solvePuzzle(int *puzzle) {
+bool solvePuzzle(int *puzzle, int *solved_puzzle) {
   if (findFirstZero(puzzle) == -1) {
+    copyPuzzle(puzzle, solved_puzzle);
     return true;
   }
   for (int i = 1; i < 10; ++i) {
@@ -112,11 +113,10 @@ bool solvePuzzle(int *puzzle) {
     if (!isPuzzleValid(copy)) {
       continue;
     }
-    bool solved = solvePuzzle(copy);
+    bool solved = solvePuzzle(copy, solved_puzzle);
     if (!solved) {
       continue;
     }
-    copyPuzzle(copy, puzzle);
     return true;
   }
   return false;
