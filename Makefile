@@ -1,5 +1,5 @@
 format:
 	clang-format -i *.cpp *.h
 
-run-sudoku:
-	g++ sudoku.cpp -o sudoku; ./sudoku
+run-hello:
+	g++ -std=c++11 hello.cpp -o hello; ./hello

@@ -4,4 +4,8 @@
 !*.*
 # Unignore all dirs
 !*/
+# Unignore all makefiles
+!Makefile
+# Ignore VSCode config
+.vscode
 ### Above combination will ignore all files without extension ###
